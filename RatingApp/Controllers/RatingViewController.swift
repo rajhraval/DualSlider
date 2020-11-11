@@ -41,7 +41,7 @@ class RatingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         title = "Choose Rating"
         
         navigationController?.navigationBar.prefersLargeTitles = true

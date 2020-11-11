@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         title = "Rating"
         navigationController?.navigationBar.prefersLargeTitles = true
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: createHistoryBarButton())
         
