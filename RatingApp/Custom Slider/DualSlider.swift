@@ -93,7 +93,11 @@ class DualSlider: UIControl {
         CATransaction.commit()
     }
     
-    /// Scales the given value according the bound's context
+    /**
+     Provides the given scaled value according the bound's context
+     - parameters:
+       - value: The upper and lower value of the slider
+     */
     
     public func positonForValue(_ value: CGFloat) -> CGFloat {
         return bounds.width * value
@@ -106,7 +110,7 @@ class DualSlider: UIControl {
         return CGPoint(x: x, y: (bounds.height - pointerImage.size.height) / 2)
     }
     
-    // MARK: Slider Touch-Handlers
+    // MARK: Slider Touch Event-Handlers
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         previousPointerLocation = touch.location(in: self)

@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var openSheetButton: UIButton!
+    var openSheetButton: DSButton!
+    var historyBarButton: UIButton!
     var ratingImageView: UIImageView!
 
     let rvc = RatingViewController()
@@ -20,10 +21,23 @@ class ViewController: UIViewController {
         title = "Rating"
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "History", style: .plain, target: self, action: #selector(openRatingHistory))
-      
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: createHistoryBarButton())
+        
         createCustomButton()
         createImageView()
+    }
+    
+    // MARK: Custom UIBarButtonItem
+    
+    func createHistoryBarButton() -> UIButton {
+        historyBarButton = UIButton(type: .system)
+        historyBarButton.setImage(UIImage(systemName: "clock"), for: .normal)
+        historyBarButton.setTitle("History", for: .normal)
+        historyBarButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -10)
+        historyBarButton.sizeToFit()
+        historyBarButton.addTarget(self, action: #selector(openRatingHistory), for: .touchUpInside)
+        return historyBarButton
     }
    
     // MARK: UIBarButtonItem Action
@@ -36,12 +50,8 @@ class ViewController: UIViewController {
     // MARK: Custom UIButton
     
     func createCustomButton() {
-        openSheetButton = UIButton(type: .custom)
+        openSheetButton = DSButton(text: "Rating: \(rvc.previousLowerValue ?? 1) - \(rvc.previousUpperValue ?? 9)")
         openSheetButton.translatesAutoresizingMaskIntoConstraints = false
-        openSheetButton.setTitle("Rating: \(rvc.previousLowerValue ?? 1) - \(rvc.previousUpperValue ?? 9)", for: .normal)
-        openSheetButton.titleLabel?.textColor = .white
-        openSheetButton.backgroundColor = .systemPurple
-        openSheetButton.layer.cornerRadius = 13
         openSheetButton.addTarget(self, action: #selector(openRatingController), for: .touchUpInside)
         view.addSubview(openSheetButton)
         

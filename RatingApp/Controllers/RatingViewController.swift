@@ -17,7 +17,7 @@ class RatingViewController: UIViewController {
     var upperValueLabel: UILabel!
     var lowerRatingLabel: UILabel!
     var upperRatingLabel: UILabel!
-    var submitButton: UIButton!
+    var submitButton: DSButton!
     
     var delegate: PreviousRatingDelegate?
     
@@ -131,18 +131,14 @@ class RatingViewController: UIViewController {
     @objc func sliderValueChanged(_ dualSlider: DualSlider) {
         sliderLowerValue = Int((dualSlider.lowerValue * 10).rounded(.up))
         sliderUpperValue = Int((dualSlider.upperValue * 10).rounded(.up))
-        //print("\(sliderLowerValue), \(sliderUpperValue)")
+        //print("\(sliderLowerValue), \(sliderUpperValue)") 
     }
     
     // MARK: Buttons
     
     func createSubmitButton() {
-        submitButton = UIButton(type: .custom)
+        submitButton = DSButton(text: "Submit")
         submitButton.translatesAutoresizingMaskIntoConstraints = false
-        submitButton.setTitle("Submit", for: .normal)
-        submitButton.titleLabel?.textColor = .white
-        submitButton.backgroundColor = .systemPurple
-        submitButton.layer.cornerRadius = 13
         submitButton.addTarget(self, action: #selector(createSubmitAction), for: .touchUpInside)
         view.addSubview(submitButton)
         
@@ -153,7 +149,7 @@ class RatingViewController: UIViewController {
     }
     
     @objc func createSubmitAction() {
-        if (sliderLowerValue == 1 && sliderUpperValue == 10) || (sliderLowerValue == 0 && sliderUpperValue == 10)  {
+        if (sliderLowerValue == 1 && sliderUpperValue == 10) || (sliderLowerValue == 0 && sliderUpperValue == 10) || (sliderLowerValue == sliderUpperValue) {
             showAlert(title: "Invalid Range", message: "Please try to set a range either from 1 to 9 or 2 to 10.", handler: nil)
         } else {
             saveRating()
@@ -201,7 +197,7 @@ class RatingViewController: UIViewController {
     }
 }
 
-// Extension
+// MARK: Extension
 
 extension UserDefaults {
     

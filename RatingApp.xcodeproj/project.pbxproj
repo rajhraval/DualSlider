@@ -13,6 +13,7 @@
 		CF1B4740255973DD004A50DB /* RatingItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B473E255973DD004A50DB /* RatingItem+CoreDataProperties.swift */; };
 		CF2C1159255679E900D006EB /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C1158255679E900D006EB /* RatingViewController.swift */; };
 		CF2C115D25567A0D00D006EB /* RatingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C115C25567A0D00D006EB /* RatingHistoryViewController.swift */; };
+		CF41BF88255BC35500884426 /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF41BF87255BC35500884426 /* DSButton.swift */; };
 		CF49C6F525566C6F00EF92B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF49C6F425566C6F00EF92B8 /* AppDelegate.swift */; };
 		CF49C6F725566C6F00EF92B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF49C6F625566C6F00EF92B8 /* SceneDelegate.swift */; };
 		CF49C6F925566C6F00EF92B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF49C6F825566C6F00EF92B8 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		CF1B473E255973DD004A50DB /* RatingItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RatingItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CF2C1158255679E900D006EB /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		CF2C115C25567A0D00D006EB /* RatingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingHistoryViewController.swift; sourceTree = "<group>"; };
+		CF41BF87255BC35500884426 /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
 		CF49C6F125566C6F00EF92B8 /* RatingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF49C6F425566C6F00EF92B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF49C6F625566C6F00EF92B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		CF2542A2255A559E0074BD8B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF41BF87255BC35500884426 /* DSButton.swift */,
 				CF0A844B2559901B00522598 /* RatingViewCell.swift */,
 			);
 			path = Views;
@@ -193,6 +196,7 @@
 				CF2C1159255679E900D006EB /* RatingViewController.swift in Sources */,
 				CF0A844C2559901B00522598 /* RatingViewCell.swift in Sources */,
 				CFBD47062556A180000D9AD8 /* DualSlider.swift in Sources */,
+				CF41BF88255BC35500884426 /* DSButton.swift in Sources */,
 				CF1B473B2559733F004A50DB /* RatingItem.xcdatamodeld in Sources */,
 				CF8CD5932557F082005F6290 /* DualSliderTrackLayer.swift in Sources */,
 				CF1B4740255973DD004A50DB /* RatingItem+CoreDataProperties.swift in Sources */,
